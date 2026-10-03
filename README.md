@@ -70,7 +70,6 @@ app.js     ── 游戏流程控制 + Canvas 渲染 + 交互
 ```bash
 git clone https://github.com/duoduo61/html5-aichess.git
 cd html5-aichess
-# 直接用浏览器打开 index.html
 ```
 
 ### 方式二：本地服务器（推荐）
