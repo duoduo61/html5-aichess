@@ -1,23 +1,17 @@
-
-
 # html5-aichess
-使用DeepSeek V4.1 Flash做的HTML5游戏——中国象棋 · AI
 
-# 示例网站 
-[主站：国内推荐站点](https://520-1314.cc.cd)
+> 使用 DeepSeek V4.1 Flash 制作的 HTML5 游戏 —— 中国象棋 · AI
 
-[备用：Cloudflare Pages](https://zh-chess.pages.dev)
-
-> 一款基于 HTML5 的中国象棋人机对弈游戏，内嵌 AI 搜索引擎，支持人机对战、悔棋、先后手选择等功能。
-
-**在线体验：**
+## 🌐 在线体验
 
 - 🌐 [主站（国内推荐）](https://520-1314.cc.cd/)
 - ⚡ [备用站（Cloudflare Pages）](https://zh-chess.pages.dev/)
 
-##  项目简介
+## 📖 项目简介
 
 **中国象棋 · AI** 是一款纯前端的 HTML5 象棋游戏。项目使用 **DeepSeek V4.1 Flash** 辅助开发，整体代码结构清晰、轻量，无需后端服务即可运行。玩家可以选择执红先行或执黑后行，与内置 AI 引擎进行对弈。
+
+> 一款基于 HTML5 的中国象棋人机对弈游戏，内嵌 AI 搜索引擎，支持人机对战、悔棋、先后手选择等功能。
 
 > 项目从零实现了中国象棋的完整规则逻辑，包括所有棋子的合法走法生成、将军检测、绝杀判定、长将判和等机制。
 
@@ -46,8 +40,6 @@
 - **响应式布局**：适配桌面端与移动端
 - **翻转棋盘**：执黑时棋盘自动翻转，符合对弈视角
 
-------
-
 ## 🛠️ 技术实现
 
 ### 技术栈
@@ -62,14 +54,12 @@
 
 ### 核心模块
 
-```
+```text
 index.html ── 页面结构
 style.css  ── 样式与动画
 engine.js  ── 象棋规则引擎 + AI 搜索算法
 app.js     ── 游戏流程控制 + Canvas 渲染 + 交互
 ```
-
-------
 
 ## 🚀 快速开始
 
@@ -77,31 +67,25 @@ app.js     ── 游戏流程控制 + Canvas 渲染 + 交互
 
 下载项目文件，用浏览器打开 `index.html` 即可开始游戏。
 
-bash
-
-```
+```bash
 git clone https://github.com/duoduo61/html5-aichess.git
 cd html5-aichess
 # 直接用浏览器打开 index.html
 ```
 
-
-
 ### 方式二：本地服务器（推荐）
 
-使用Python：
+使用 Python：
 
-```
+```bash
 python -m http.server 8080
 ```
 
-或使用Node.js
+或使用 Node.js：
 
-```
+```bash
 npx serve .
 ```
-
-
 
 然后访问 `http://localhost:8080`。
 
@@ -110,15 +94,13 @@ npx serve .
 - 任意现代浏览器（Chrome / Edge / Firefox / Safari）
 - 无需安装任何依赖
 
-------
-
 ## 🤖 AI 引擎说明
 
 AI 引擎位于 `engine.js`，采用经典的 **Negamax 搜索 + Alpha-Beta 剪枝** 算法。
 
 ### 搜索流程
 
-```
+```text
 findBestMove(board, side, maxDepth)
   ├── 生成所有合法走法（genLegalMoves）
   ├── 按吃子价值排序（orderMoves）
@@ -126,8 +108,6 @@ findBestMove(board, side, maxDepth)
   │     └── 每一层：Negamax + Alpha-Beta 剪枝
   └── 返回最优走法
 ```
-
-
 
 ### 局面评估
 
@@ -153,25 +133,19 @@ findBestMove(board, side, maxDepth)
 
 > 💡 搜索深度可通过修改 `engine.js` 中的 `MAX_DEPTH` 常量调整。深度越大，AI 棋力越强，但计算时间也相应增加。
 
-------
-
 ## 📋 版本历史
 
-| 版本   | 日期       | 内容                            |
-| :----- | :--------- | :------------------------------ |
-| v1.0.0 | 2026.10.03 | · “中国象棋 · AI”第一版正式发布 |
-
-------
+| 版本   | 日期       | 内容                          |
+| :----- | :--------- | :---------------------------- |
+| v1.0.0 | 2026.10.03 | “中国象棋 · AI”第一版正式发布 |
 
 ## 📄 开源协议
 
-本项目基于 MIT License开源，欢迎自由使用、修改和分发。
-
-------
+本项目基于 [MIT License](LICENSE) 开源，欢迎自由使用、修改和分发。
 
 ## 🙏 致谢
 
 - 开发工具：[DeepSeek V4.1 Flash](https://deepseek.com/)
 - Powered By duoduo61
 
-**如果这个项目对你有帮助，请给个 Star吧！**
+**如果这个项目对你有帮助，请给个 Star 吧！**
